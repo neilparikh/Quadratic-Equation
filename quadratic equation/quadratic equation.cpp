@@ -17,9 +17,18 @@ private:
 public:
 	double root1(void) {return x1;};
 	double root2(void) {return x2;};
-	void updateA(double A) {this->a = A;};
-	void updateB(double B) {this->b = B;};
-	void updateC(double C) {this->c = C;};
+	void updateA(double A) {
+		this->a = A;
+		calculate();
+	}
+	void updateB(double B) {
+		this->b = B;
+		calculate();
+	}
+	void updateC(double C) {
+		this->c = C;
+		calculate();
+	}
 	short number_of_roots;
 	void calculate(void) {
 		delta = b*b-4*a*c;
